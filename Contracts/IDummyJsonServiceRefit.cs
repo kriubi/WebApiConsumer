@@ -1,6 +1,6 @@
 using Refit;
 
-namespace WebApiConsumer;
+namespace WebApiConsumer.Contracts;
 
 public interface IDummyJsonServiceRefit
 {

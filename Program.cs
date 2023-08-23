@@ -1,5 +1,6 @@
 using Refit;
-using WebApiConsumer;
+using WebApiConsumer.Contracts;
+using WebApiConsumer.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 

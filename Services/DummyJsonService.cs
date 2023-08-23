@@ -1,6 +1,7 @@
 using System.Text.Json;
+using WebApiConsumer.Contracts;
 
-namespace WebApiConsumer;
+namespace WebApiConsumer.Services;
 
 public sealed class DummyJsonService : IDummyJsonService
 {
@@ -33,23 +34,4 @@ public sealed class DummyJsonService : IDummyJsonService
 
         return result ?? null;
     }
-}
-
-public interface IDummyJsonService
-{
-    Task<LoginResponse?> Login(string username, string password);
-    Task<GetUserResponse?> GetUser(int id);
-}
-
-public sealed record LoginResponse
-{
-    public int id { get; set; }
-    public string username { get; set; } = string.Empty;
-    public string password { get; set; } = string.Empty;
-    public string email { get; set; } = string.Empty;
-    public string firstName { get; set; } = string.Empty;
-    public string lastName { get; set; } = string.Empty;
-    public string gender { get; set; } = string.Empty;
-    public string image { get; set; } = string.Empty;
-    public string token { get; set; } = string.Empty;
 }
